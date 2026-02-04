@@ -1,0 +1,20 @@
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- assign current_path = page.url -%}
+
+<div class="language-switcher">
+  {%- if current_lang == "en" -%}
+    <span class="lang-current">EN</span>
+    {%- assign fr_path = current_path | replace: "/en/", "/fr/" -%}
+    {%- if fr_path == current_path -%}
+      {%- assign fr_path = "/fr/" -%}
+    {%- endif -%}
+    <a href="{{ fr_path | relative_url }}" class="lang-link">FR</a>
+  {%- else -%}
+    {%- assign en_path = current_path | replace: "/fr/", "/en/" -%}
+    {%- if en_path == current_path -%}
+      {%- assign en_path = "/en/" -%}
+    {%- endif -%}
+    <a href="{{ en_path | relative_url }}" class="lang-link">EN</a>
+    <span class="lang-current">FR</span>
+  {%- endif -%}
+</div>

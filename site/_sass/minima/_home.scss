@@ -1,0 +1,229 @@
+/**
+ * Home page styles - Hero and Projects sections
+ */
+
+// Hero Section
+.hero-section {
+  background: linear-gradient(135deg, $background-color 0%, lighten($grey-color-light, 5%) 100%);
+  padding: $spacing-unit * 3 $spacing-unit;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.hero-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-unit * 2;
+  align-items: center;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: $spacing-unit;
+  }
+}
+
+.hero-image {
+  text-align: center;
+  
+  .profile-pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 4px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+    }
+
+    @include media-query($on-palm) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+.hero-text {
+  h1.hero-title {
+    @include relative-font-size(2.5);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 $spacing-unit * 0.5 0;
+    color: $text-color;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  p.hero-subtitle {
+    @include relative-font-size(1.25);
+    color: $grey-color;
+    margin: 0 0 $spacing-unit 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(1.1);
+    }
+  }
+
+  > p {
+    @include relative-font-size(1.05);
+    color: $text-color;
+    line-height: 1.8;
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.hero-links {
+  display: flex;
+  gap: $spacing-unit;
+  margin-top: $spacing-unit * 1.5;
+
+  @include media-query($on-palm) {
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: $grey-color-dark;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background-color: $text-color;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// Projects Section
+.projects-section {
+  padding: $spacing-unit * 1 0;
+  background-color: white;
+  border-bottom: 1px solid $grey-color-light;
+  
+  .wrapper {
+    max-width: 1200px;
+    padding: 0 $spacing-unit;
+
+    @include media-query($on-palm) {
+      padding: 0 $spacing-unit * 0.5;
+    }
+  }
+}
+
+.section-title {
+  @include relative-font-size(2);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: $spacing-unit * 2;
+  color: $text-color;
+  position: relative;
+  padding-bottom: $spacing-unit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: $grey-color-dark;
+    border-radius: 2px;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-unit * 2;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-category {
+  .category-title {
+    @include relative-font-size(1.5);
+    font-weight: 600;
+    margin-bottom: $spacing-unit * 1.5;
+    color: $text-color;
+    padding-bottom: $spacing-unit;
+    border-bottom: 2px solid $grey-color-light;
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-unit * 1.5;
+}
+
+.project-card {
+  padding: $spacing-unit * 1.5;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: white;
+
+  &:hover {
+    border-color: $grey-color;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
+
+  h4 {
+    @include relative-font-size(1.1);
+    font-weight: 600;
+    margin: 0 0 $spacing-unit * 0.5 0;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $grey-color-dark;
+      }
+    }
+  }
+
+  p.project-meta {
+    @include relative-font-size(0.9);
+    color: $grey-color;
+    font-weight: 500;
+    margin: 0 0 $spacing-unit * 0.75 0;
+  }
+
+  p {
+    @include relative-font-size(0.95);
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0 0 $spacing-unit 0;
+  }
+
+  .read-more {
+    @include relative-font-size(0.95);
+    color: $grey-color-dark;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}

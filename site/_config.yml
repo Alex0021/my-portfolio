@@ -18,21 +18,38 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Alex's portfolio
+author: Alexandre Hébert
+email: alexandre-1.hebert@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The perfect project for vibe coding ;)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  Alex0021
+linkedin_username: alexheb0021
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  projects:
+    output: true
+    permalink: /en/projects/:title/
+  projects_fr:
+    output: true
+    permalink: /fr/projects/:title/
+
+defaults:
+  - scope:
+      path: "en"
+    values:
+      lang: en
+  - scope:
+      path: "fr"
+    values:
+      lang: fr
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -41,6 +58,9 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
+#
+exclude:
+  - .well-known/
 #
 # exclude:
 #   - .sass-cache/

@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="{{ "/assets/images/profile.png" | relative_url }}" alt="Profile Picture" class="profile-pic">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-title">{{ page.hooktitle | default: "Who am I?" }}</h1>
+        <p class="hero-subtitle">{{ page.subtitle | default: "Designer & Developer" }}</p>
+        {{ content }}
+      </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="wrapper">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <!-- Academic Projects -->
+        <div class="project-category">
+          <h3 class="category-title">Academic</h3>
+          <div class="projects-list">
+            {%- assign academic = site.projects | where: "category", "academic" -%}
+            {%- for project in academic -%}
+            <article class="project-card">
+              <h4><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h4>
+              <p class="project-meta">{{ project.date | date: "%Y" }}</p>
+              <p>{{ project.excerpt | strip_html | truncatewords: 20 }}</p>
+              <a href="{{ project.url | relative_url }}" class="read-more">Read more →</a>
+            </article>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <!-- Personal Projects -->
+        <div class="project-category">
+          <h3 class="category-title">Personal</h3>
+          <div class="projects-list">
+            {%- assign personal = site.projects | where: "category", "personal" -%}
+            {%- for project in personal -%}
+            <article class="project-card">
+              <h4><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h4>
+              <p class="project-meta">{{ project.date | date: "%Y" }}</p>
+              <p>{{ project.excerpt | strip_html | truncatewords: 20 }}</p>
+              <a href="{{ project.url | relative_url }}" class="read-more">Read more →</a>
+            </article>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

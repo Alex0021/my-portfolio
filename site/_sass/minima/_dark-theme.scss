@@ -1,0 +1,132 @@
+/**
+ * Dark theme overrides
+ */
+
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background-color: #0b1220;
+  color: #f3f5f9;
+}
+
+[data-theme="dark"] a {
+  color: #9ec5ff;
+}
+
+[data-theme="dark"] a:visited {
+  color: #b3ccff;
+}
+
+[data-theme="dark"] a:hover {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .site-footer {
+  background-color: #0e1628;
+  border-color: #28344a;
+}
+
+[data-theme="dark"] .projects-section {
+  background-color: #0d1424;
+  border-color: #28344a;
+}
+
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #0e1628 0%, #121e35 100%);
+}
+
+[data-theme="dark"] .hero-text h1 {
+    color: #574f6d;
+}
+
+[data-theme="dark"] .site-title,
+[data-theme="dark"] .page-link,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .category-title,
+[data-theme="dark"] .project-title,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .hero-text > p,
+[data-theme="dark"] .project-card h4 a {
+  color: #f7f9fc;
+}
+
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .project-meta,
+[data-theme="dark"] .project-category,
+[data-theme="dark"] .project-date,
+[data-theme="dark"] .footer-col-wrapper {
+  color: #d4dae6;
+}
+
+[data-theme="dark"] .project-card {
+  background-color: #131c31;
+  border-color: #2a3850;
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: #394b6b;
+  box-shadow: 0 6px 18px rgba(8, 12, 22, 0.5);
+}
+
+[data-theme="dark"] .project-category .category-title {
+  border-bottom-color: #2a3850;
+}
+
+[data-theme="dark"] .section-title::after {
+  background-color: #9fb0c8;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: #121a2e;
+  border-color: #2a3850;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  border-color: #394b6b;
+}
+
+[data-theme="dark"] .language-switcher .lang-current {
+  color: #f7f9fc;
+}
+
+[data-theme="dark"] .language-switcher .lang-link {
+  color: #9fb0c8;
+}
+
+[data-theme="dark"] .language-switcher .lang-link:hover {
+  color: #f7f9fc;
+}
+
+[data-theme="dark"] blockquote {
+  color: #9fb0c8;
+  border-left-color: #28344a;
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  border-color: #2a3850;
+  background-color: #0e1628;
+  color: #d4dae6;
+}
+
+[data-theme="dark"] table {
+  color: #d4dae6;
+  border-color: #28344a;
+}
+
+[data-theme="dark"] table tr:nth-child(even) {
+  background-color: #0e1628;
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table td {
+  border-color: #28344a;
+}
+
+[data-theme="dark"] table th {
+  background-color: #0e1628;
+}
