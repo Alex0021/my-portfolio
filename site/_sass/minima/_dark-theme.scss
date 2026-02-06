@@ -56,10 +56,21 @@
 
 [data-theme="dark"] .hero-subtitle,
 [data-theme="dark"] .project-meta,
-[data-theme="dark"] .project-category,
-[data-theme="dark"] .project-date,
 [data-theme="dark"] .footer-col-wrapper {
   color: #d4dae6;
+}
+[data-theme="dark"] .project-date
+{
+  color: #8799b8;
+}
+[data-theme="dark"] .project-category {
+  color: #8799b8;
+  background-color: #0e1628;
+}
+
+
+[data-theme="dark"] .project-content{
+  color: #f7f9fc;
 }
 
 [data-theme="dark"] .project-card {

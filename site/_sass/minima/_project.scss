@@ -1,0 +1,164 @@
+/**
+ * Project styles - Project cards and project detail pages
+ */
+
+// Projects Section on Home Page
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-unit * 2;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-category {
+  .category-title {
+    @include relative-font-size(1.5);
+    font-weight: 600;
+    margin-bottom: $spacing-unit * 0.5;
+    color: $text-color;
+    padding-bottom: $spacing-unit * 0.5;
+    border-bottom: 2px solid $grey-color-light;
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-unit * 1.5;
+}
+
+.project-card {
+  padding: $spacing-unit;
+  padding-bottom: $spacing-unit * 0.5;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &:hover {
+    border-color: $grey-color;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
+
+  h4 {
+    @include relative-font-size(1.1);
+    font-weight: 600;
+    margin: 0 0 $spacing-unit * 0.5 0;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $grey-color-dark;
+      }
+    }
+  }
+
+  p.project-meta {
+    @include relative-font-size(0.9);
+    color: $grey-color;
+    font-weight: 500;
+    margin: 0 0 $spacing-unit * 0.5 0;
+  }
+
+  p {
+    @include relative-font-size(0.95);
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0 0 $spacing-unit * 0.5 0;
+    flex-grow: 1;
+  }
+
+  .read-more {
+    @include relative-font-size(0.95);
+    color: $grey-color-dark;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    align-self: flex-end;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+// Project Detail Page
+.project-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid $grey-color-light;
+}
+
+.project-title {
+  @include relative-font-size(2.5);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: $text-color;
+}
+
+.project-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.project-category,
+.project-date {
+  @include relative-font-size(0.95);
+  color: $grey-color;
+  font-weight: 500;
+}
+
+.project-category {
+  background-color: $grey-color-light;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-content {
+  @include relative-font-size(1);
+  line-height: 1.8;
+  color: $text-color;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.project-footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $grey-color-light;
+}
+
+.back-link {
+  color: $text-color;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $grey-color-dark;
+  }
+}
