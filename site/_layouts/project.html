@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 <article class="project-detail">
@@ -17,79 +17,11 @@ layout: page
 
   <footer class="project-footer">
     <nav class="project-nav">
-      <a href="{{ "/" | relative_url }}" class="back-link">← Back to Projects</a>
+      {%- if page.lang == "fr" or page.url contains "/fr/" -%}
+        <a href="{{ "/fr/" | relative_url }}" class="back-link">← Back to Projects</a>
+      {%- else -%}
+        <a href="{{ "/en" | relative_url }}" class="back-link">← Back to Projects</a>
+      {%- endif -%}
     </nav>
   </footer>
 </article>
-
-<style>
-  .project-detail {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .project-header {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid #e8e8e8;
-  }
-
-  .project-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #111;
-  }
-
-  .project-info {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  .project-category,
-  .project-date {
-    font-size: 0.95rem;
-    color: #828282;
-    font-weight: 500;
-  }
-
-  .project-category {
-    background-color: #f5f5f5;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .project-content {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #111;
-  }
-
-  .project-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 2rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-
-  .project-footer {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e8e8e8;
-  }
-
-  .back-link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-  }
-
-  .back-link:hover {
-    color: #5a5a5a;
-  }
-</style>

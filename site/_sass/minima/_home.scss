@@ -107,7 +107,7 @@
   }
 }
 
-// Projects Section
+// Projects Section - card and grid styles moved to _project.scss
 .projects-section {
   padding: $spacing-unit * 1 0;
   background-color: white;
@@ -142,88 +142,5 @@
     height: 3px;
     background-color: $grey-color-dark;
     border-radius: 2px;
-  }
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-unit * 2;
-
-  @include media-query($on-palm) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.project-category {
-  .category-title {
-    @include relative-font-size(1.5);
-    font-weight: 600;
-    margin-bottom: $spacing-unit * 1.5;
-    color: $text-color;
-    padding-bottom: $spacing-unit;
-    border-bottom: 2px solid $grey-color-light;
-  }
-}
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-unit * 1.5;
-}
-
-.project-card {
-  padding: $spacing-unit * 1.5;
-  border: 1px solid $grey-color-light;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  background-color: white;
-
-  &:hover {
-    border-color: $grey-color;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    transform: translateY(-4px);
-  }
-
-  h4 {
-    @include relative-font-size(1.1);
-    font-weight: 600;
-    margin: 0 0 $spacing-unit * 0.5 0;
-
-    a {
-      color: $text-color;
-      text-decoration: none;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: $grey-color-dark;
-      }
-    }
-  }
-
-  p.project-meta {
-    @include relative-font-size(0.9);
-    color: $grey-color;
-    font-weight: 500;
-    margin: 0 0 $spacing-unit * 0.75 0;
-  }
-
-  p {
-    @include relative-font-size(0.95);
-    color: $text-color;
-    line-height: 1.6;
-    margin: 0 0 $spacing-unit 0;
-  }
-
-  .read-more {
-    @include relative-font-size(0.95);
-    color: $grey-color-dark;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: $text-color;
-    }
   }
 }
