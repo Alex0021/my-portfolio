@@ -33,7 +33,15 @@ layout: default
             {%- for project in academic -%}
             <article class="project-card">
               <h4><a href="{{ project.url | relative_url }}">({{ project.date | date: "%Y" }}) {{ project.title }}</a></h4>
+              {%- if project.skills -%}
+              <ul class="project-skills">
+                {%- for skill in project.skills -%}
+                <li class="project-skill">{{ skill }}</li>
+                {%- endfor -%}
+              </ul>
+              {%- else -%}
               <p>{{ project.excerpt | strip_html | truncatewords: 20 }}</p>
+              {%- endif -%}
               <a href="{{ project.url | relative_url }}" class="read-more">Read more →</a>
             </article>
             {%- endfor -%}
@@ -52,7 +60,15 @@ layout: default
             {%- for project in personal -%}
             <article class="project-card">
               <h4><a href="{{ project.url | relative_url }}">{{ project.title }} ({{ project.date | date: "%Y" }})</a></h4>
+              {%- if project.skills -%}
+              <ul class="project-skills">
+                {%- for skill in project.skills -%}
+                <li class="project-skill">{{ skill }}</li>
+                {%- endfor -%}
+              </ul>
+              {%- else -%}
               <p>{{ project.excerpt | strip_html | truncatewords: 20 }}</p>
+              {%- endif -%}
               <a href="{{ project.url | relative_url }}" class="read-more">Read more →</a>
             </article>
             {%- endfor -%}
