@@ -5,9 +5,18 @@ layout: default
 <article class="project-detail">
   <header class="project-header">
     <h1 class="project-title">{{ page.title }}</h1>
-    <div class="project-info">
-      <span class="project-category">{{ page.category | capitalize }}</span>
-      <span class="project-date">{{ page.date | date: "%Y" }}</span>
+    <div class="project-meta-wrapper">
+      <div class="project-info">
+        <span class="project-category">{{ page.category | capitalize }}</span>
+        <span class="project-date">{{ page.date | date: "%Y" }}</span>
+      </div>
+      {%- if page.skills -%}
+      <ul class="project-detail-skills">
+        {%- for skill in page.skills -%}
+        <li class="project-skill">{{ skill }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
     </div>
   </header>
 
