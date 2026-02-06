@@ -4,6 +4,12 @@ category: academic
 date: 01-05-2024
 title: Viewing coverage optimization of Areal Swarms using local sensing
 excerpt: Summary HERE
+skills:
+  - Python
+  - Swarm Robotics
+  - Simulation
+  - ROS2
+  - Sim2Real
 ---
 
 ## Overview
