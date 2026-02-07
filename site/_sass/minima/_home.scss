@@ -71,11 +71,51 @@
     }
   }
 
+  .hero-quote {
+    margin: 0 0 $spacing-unit 0;
+    padding: 0 0 0 $spacing-unit * 0.75;
+    position: relative;
+    font-style: italic;
+    color: $grey-color-dark;
+    border-left: none;
+    font-family: "Playfair Display", serif;
+
+    &::before {
+      content: "“";
+      position: absolute;
+      left: -8px;
+      top: -14px;
+      font-size: 3rem;
+      line-height: 1;
+      color: $grey-color;
+    }
+  }
+
+  .hero-quote-text {
+    @include relative-font-size(1.05);
+    display: inline-block;
+    position: relative;
+    padding-right: 1.4rem;
+    font-size: 1.5rem;
+
+    &::after {
+      content: "”";
+      position: absolute;
+      right: 0;
+      bottom: 0rem;
+      font-size: 3rem;
+      line-height: 1;
+      color: $grey-color;
+    }
+  }
+
   > p {
     @include relative-font-size(1.05);
     color: $text-color;
     line-height: 1.8;
     margin-bottom: $spacing-unit;
+    text-align: justify;
+    padding-right: $spacing-unit * 2;
   }
 }
 

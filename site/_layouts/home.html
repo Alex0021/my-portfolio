@@ -11,6 +11,11 @@ layout: default
       <div class="hero-text">
         <h1 class="hero-title">{{ page.hooktitle | default: "Who am I?" }}</h1>
         <p class="hero-subtitle">{{ page.subtitle | default: "Designer & Developer" }}</p>
+        {%- if page.motd -%}
+        <blockquote class="hero-quote">
+          <span class="hero-quote-text">{{ page.motd }}</span>
+        </blockquote>
+        {%- endif -%}
         {{ content }}
       </div>
   </section>

@@ -59,6 +59,18 @@
 [data-theme="dark"] .footer-col-wrapper {
   color: #d4dae6;
 }
+
+[data-theme="dark"] .hero-quote {
+  color: #b7c5dd;
+}
+
+[data-theme="dark"] .hero-quote::before {
+  color: #2a3850;
+}
+
+[data-theme="dark"] .hero-quote-text::after {
+  color: #2a3850;
+}
 [data-theme="dark"] .project-date
 {
   color: #8799b8;
