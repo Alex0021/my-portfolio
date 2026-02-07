@@ -26,9 +26,9 @@ layout: default
           <h3 class="category-title">Academic</h3>
           <div class="projects-list">
             {%- if page.lang == "fr" -%}
-              {%- assign academic = site.projects_fr | where: "category", "academic" -%}
+              {%- assign academic = site.projects_fr | where: "category", "academic" | sort: "date" | reverse -%}
             {%- else -%}
-              {%- assign academic = site.projects | where: "category", "academic" -%}
+              {%- assign academic = site.projects | where: "category", "academic" | sort: "date" | reverse -%}
             {%- endif -%}
             {%- for project in academic -%}
             <article class="project-card">
@@ -53,9 +53,9 @@ layout: default
           <h3 class="category-title">Personal</h3>
           <div class="projects-list">
             {%- if page.lang == "fr" -%}
-              {%- assign personal = site.projects_fr | where: "category", "personal" -%}
+              {%- assign personal = site.projects_fr | where: "category", "personal" | sort: "date" | reverse -%}
             {%- else -%}
-              {%- assign personal = site.projects | where: "category", "personal" -%}
+              {%- assign personal = site.projects | where: "category", "personal" | sort: "date" | reverse -%}
             {%- endif -%}
             {%- for project in personal -%}
             <article class="project-card">

@@ -93,6 +93,13 @@
 [data-theme="dark"] .project-category .category-title {
   border-bottom-color: #2a3850;
 }
+[data-theme="dark"] .read-more {
+  color: #b3ccff;
+
+  &:visited { 
+    color: #5b92ff;
+  }
+}
 
 [data-theme="dark"] .section-title::after {
   background-color: #9fb0c8;
