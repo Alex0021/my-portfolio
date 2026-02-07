@@ -23,8 +23,8 @@ author: Alexandre Hébert
 email: alexandre-1.hebert@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   The perfect vibe coding project! ;)
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/my-portfolio" # the subpath of your site, e.g. /blog
+url: "https://alex0021.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Alex0021
 linkedin_username: alexheb0021
 
