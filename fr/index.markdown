@@ -1,5 +1,5 @@
 ---
-hooktitle: Alex ou Alexandre?
+hooktitle: Alexandre Hébert
 subtitle: Roboticien & Ingénieur
 motd: "Concevoir avec curiosité, améliorer avec rigueur."
 layout: home

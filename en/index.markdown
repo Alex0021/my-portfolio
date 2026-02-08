@@ -1,5 +1,5 @@
 ---
-hooktitle: Alex or Alexandre?
+hooktitle: Alexandre Hebert
 subtitle: Robotics Enthousiast & Engineer
 motd: Try it. Break it. Understand it.
 layout: home
