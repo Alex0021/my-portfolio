@@ -61,6 +61,10 @@ defaults:
 #
 exclude:
   - .well-known/
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
 #
 # exclude:
 #   - .sass-cache/
