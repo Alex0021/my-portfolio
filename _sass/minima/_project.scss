@@ -117,8 +117,7 @@
 
 // Project Detail Page
 .project-detail {
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 0 $spacing-unit * 3;
 }
 
 .project-header {

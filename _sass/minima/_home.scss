@@ -154,7 +154,6 @@
   border-bottom: 1px solid $grey-color-light;
   
   .wrapper {
-    max-width: 1200px;
     padding: 0 $spacing-unit;
 
     @include media-query($on-palm) {
