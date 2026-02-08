@@ -24,7 +24,7 @@ The project was completed in a team of six, emphasizing system integration, coll
 The system acted as a bridge between industrial relays and a supervisory interface, supporting standardized communication and structured data exchange. The work involved combining hardware interaction, protocol handling, and software architecture in a cohesive platform.
 
 <div style="display:flex; justify-content:center">
-<img src="/assets/images/RELAIS_Schema_V3.jpg" width="1000">
+<img src="{{ "/assets/images/RELAIS_Schema_V3.jpg" | relative_url }}" width="1000">
 </div>
 
 Due to client sensitivity, implementation details are intentionally kept high-level.

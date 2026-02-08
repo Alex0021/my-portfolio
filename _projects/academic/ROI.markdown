@@ -19,9 +19,9 @@ This semester research project explored how a swarm of aerial drones can coordin
 The project was conducted alongside regular coursework, requiring structured planning and autonomous execution over a full semester.
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/assets/images/2d_swarm_9_drones_zoom.png" width="280">
-  <img src="/assets/images/webots_swarm9_topo3.png" width="280">
-  <img src="/assets/images/real_cf_wswarm7_dark.png" width="294">
+  <img src="{{ "/assets/images/2d_swarm_9_drones_zoom.png" | relative_url }}" width="280">
+  <img src="{{ "/assets/images/webots_swarm9_topo3.png" | relative_url }}" width="280">
+  <img src="{{ "/assets/images/real_cf_wswarm7_dark.png" | relative_url }}" width="294">
 </div>
 
 ---
@@ -92,7 +92,7 @@ This ensured theoretical results translated to physical behavior.
 - Successful sim-to-real demonstration on micro drones  
 - IEEE-style research report documenting methodology  
 
-<a href="/assets//extras/RO1_LIS_Report_final.pdf">Read the project report →</a>
+<a href="{{ "/assets/extras/RO1_LIS_Report_final.pdf" | relative_url }}">Read the project report →</a>
 
 ---
 

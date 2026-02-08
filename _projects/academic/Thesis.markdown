@@ -20,7 +20,7 @@ This thesis explores how aerial swarm control interfaces can adapt in real time 
 <br><br>
 The goal is to reduce operator overload while keeping the pilot engaged — supporting safe and efficient human-in-the-loop swarm operation.
 </p>
-<img src="/assets/images/ChatGPT-Thesis_poster_v2.png" width="300">
+<img src="{{ "/assets/images/ChatGPT-Thesis_poster_v2.png" | relative_url }}" width="300">
 </div>
 
 

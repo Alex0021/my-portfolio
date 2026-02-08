@@ -25,7 +25,7 @@ Even at this scale — just scratching the surface — you start to appreciate h
 The lab is built around **Proxmox VE**, which lets me isolate services into virtual machines and containers without turning the system into chaos. A **pfSense firewall** handles routing and segmentation so experiments stay controlled.
 
 <div style="display:flex; justify-content:center">
-<img src="/assets/images/2026_02_HomeLab_Services_background.png" width="700">
+<img src="{{ "/assets/images/2026_02_HomeLab_Services_background.png" | relative_url }}" width="700">
 </div>
 
 This all seems like a well organized and managed structure — **until something breaks (don't ask me)**

@@ -17,7 +17,7 @@ skills:
 This solo project focused on developing a sensor fusion scheme to accurately estimate vertical position and detect levitation on a prototype Hyperloop pod as part of the Polyloop student initiative. 
 
 <div style="display:flex; justify-content:center">
-<img src="/assets/images/Schéma_global_projet.svg" width="800">
+<img src="{{ "/assets/images/Schéma_global_projet.svg" | relative_url }}" width="800">
 </div>
 
 The challenge was to combine noisy sensor measurements into a stable, real-time height estimate suitable for physical validation.
@@ -54,7 +54,7 @@ I designed and evaluated a fusion scheme combining complementary sensor measurem
 
 **One pager project poster**
 
-► <a href="/assets/extras/Affiche-Projet3.pdf" target="_blank">Here is the PDF (In french)</a>
+► <a href="{{ "/assets/extras/Affiche-Projet3.pdf" | relative_url }}" target="_blank">Here is the PDF (In french)</a>
 
 **Project demo**
 

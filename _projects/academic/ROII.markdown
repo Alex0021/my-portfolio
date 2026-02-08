@@ -16,8 +16,8 @@ skills:
 This semester project explored how a micro aerial vehicle (MAV) can autonomously perform inspection tasks while maintaining Visual Line-Of-Sight (VLOS) with a human operator — a real regulatory requirement in Switzerland.
 
 <div style="display:flex; gap:25px; flex-wrap:wrap; justify-content:center">
-  <img src="/assets/images/Human_VLOS_drone_inspection.jpg" width="350">
-  <img src="/assets/images/ROII_project_cover_page.png" width="350">
+  <img src="{{ "/assets/images/Human_VLOS_drone_inspection.jpg" | relative_url }}" width="350">
+  <img src="{{ "/assets/images/ROII_project_cover_page.png" | relative_url }}" width="350">
 </div>
 
 The core challenge was designing a control framework that balances inspection objectives with safety and visibility constraints using Model Predictive Control (MPC). The work focused on problem formulation, simulation validation, and performance analysis under progressively complex scenarios.
@@ -73,7 +73,7 @@ A MATLAB simulation environment was used to iterate quickly on formulation desig
 2. Constraint-driven path interruption  
 3. Occlusion-aware inspection with obstacles  
 
-For more details on the problem formulation and results, have a look at the <a href="/assets/extras/ROII_Final_Report.pdf" target="_blank">Full Report</a> !
+For more details on the problem formulation and results, have a look at the <a href="{{ "/assets/extras/ROII_Final_Report.pdf" | relative_url }}" target="_blank">Full Report</a> !
 
 ---
 
