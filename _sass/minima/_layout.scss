@@ -8,6 +8,14 @@
   border-bottom: 1px solid $grey-color-light;
   padding: $spacing-unit * 0.8 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  @include media-query($on-palm) {
+    padding: $spacing-unit * 0.5 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: $spacing-unit * 0.35 0;
+  }
 }
 
 .site-header .wrapper {
@@ -18,6 +26,14 @@
   clear: none;
   position: relative;
   width: 100%;
+  
+  @include media-query($on-palm) {
+    padding: 0 $spacing-unit * 0.75;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 0 $spacing-unit * 0.5;
+  }
   
   &::after {
     content: none;
@@ -30,6 +46,14 @@
   line-height: 1;
   letter-spacing: 0;
   transition: color 0.2s ease;
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.25);
+  }
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.1);
+  }
 
   &,
   &:visited {
@@ -67,9 +91,25 @@
     padding: $spacing-unit * 0.5 0;
     border-bottom: 2px solid transparent;
 
+    @include media-query($on-palm) {
+      font-size: $base-font-size * 0.9;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: $base-font-size * 0.8;
+    }
+
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: $spacing-unit * 1.5;
+
+      @include media-query($on-palm) {
+        margin-right: $spacing-unit;
+      }
+
+      @media screen and (max-width: 400px) {
+        margin-right: $spacing-unit * 0.5;
+      }
     }
 
     &:hover {
@@ -80,7 +120,7 @@
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
+    top: 6px;
     right: $spacing-unit * 0.5;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
@@ -130,6 +170,20 @@
       }
     }
   }
+
+  @media screen and (max-width: 400px) {
+    label[for="nav-trigger"] {
+      display: none !important;
+    }
+
+    .menu-icon {
+      display: none !important;
+    }
+
+    input ~ .trigger {
+      display: none !important;
+    }
+  }
 }
 
 .separator {
@@ -156,37 +210,29 @@
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
+
+  @media screen and (max-width: 400px) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $spacing-unit * 0.75;
+    margin-left: 0;
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+
+    &:hover {
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .theme-toggle__icon {
   font-size: 1rem;
   line-height: 1;
-}
 
-.language-switcher {
-  display: flex;
-  align-items: center;
-  gap: $spacing-unit * 0.5;
-  margin-left: $spacing-unit;
-  font-size: $base-font-size * 0.9;
-  font-weight: 500;
-  flex-shrink: 0;
-
-  .lang-current {
-    color: $text-color;
-    padding: 0 $spacing-unit * 0.4;
-  }
-
-  .lang-link {
-    color: $grey-color;
-    text-decoration: none;
-    padding: 0 $spacing-unit * 0.4;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
-    }
+  @media screen and (max-width: 400px) {
+    font-size: 0.85rem;
   }
 }
 
@@ -278,6 +324,28 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .site-footer {
+    padding-top: $spacing-unit * 0.75;
+    margin-top: $spacing-unit * 0.75;
+  }
+
+  .footer-heading {
+    @include relative-font-size(0.95);
+    margin-bottom: $spacing-unit * 0.35;
+  }
+
+  .footer-col-wrapper {
+    @include relative-font-size(0.85);
+    margin-left: -$spacing-unit * 0.35;
+  }
+
+  .footer-col {
+    margin-bottom: $spacing-unit * 0.35;
+    padding-left: $spacing-unit * 0.35;
+  }
+}
+
 
 
 /**
@@ -286,14 +354,26 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+
+  @media screen and (max-width: 400px) {
+    padding: $spacing-unit * 0.75 0;
+  }
 }
 
 .page-heading {
   @include relative-font-size(2);
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.5);
+  }
 }
 
 .post-list-heading {
   @include relative-font-size(1.75);
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.4);
+  }
 }
 
 .post-list {
@@ -302,6 +382,10 @@
 
   > li {
     margin-bottom: $spacing-unit;
+
+    @media screen and (max-width: 400px) {
+      margin-bottom: $spacing-unit * 0.75;
+    }
   }
 }
 
@@ -313,6 +397,10 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.2);
+  }
 }
 
 
@@ -322,6 +410,10 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: $spacing-unit * 0.75;
+  }
 }
 
 .post-title {
@@ -332,16 +424,29 @@
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.8);
+    letter-spacing: 0;
+  }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: $spacing-unit * 0.75;
+  }
 
   h2 {
     @include relative-font-size(2);
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(1.5);
     }
   }
 
@@ -351,6 +456,10 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(1.25);
+    }
   }
 
   h4 {
@@ -358,6 +467,10 @@
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(1.05);
     }
   }
 }

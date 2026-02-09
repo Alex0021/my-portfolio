@@ -10,6 +10,11 @@
 
   @include media-query($on-palm) {
     grid-template-columns: 1fr;
+    gap: $spacing-unit;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: $spacing-unit * 0.5;
   }
 }
 
@@ -21,6 +26,16 @@
     color: $text-color;
     padding-bottom: $spacing-unit * 0.5;
     border-bottom: 2px solid $grey-color-light;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(1.25);
+      margin-bottom: $spacing-unit * 0.35;
+      padding-bottom: $spacing-unit * 0.35;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(1.1);
+    }
   }
 }
 
@@ -28,6 +43,14 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-unit * 1.5;
+
+  @include media-query($on-palm) {
+    gap: $spacing-unit;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: $spacing-unit * 0.5;
+  }
 }
 
 .project-card {
@@ -41,16 +64,42 @@
   flex-direction: column;
   min-height: 100%;
 
+  @include media-query($on-palm) {
+    padding: $spacing-unit * 0.75;
+    padding-bottom: $spacing-unit * 0.35;
+    border-radius: 4px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: $spacing-unit * 0.5;
+    padding-bottom: $spacing-unit * 0.25;
+  }
+
   &:hover {
     border-color: $grey-color;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     transform: translateY(-4px);
+
+    @include media-query($on-palm) {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
   }
 
   h4 {
     @include relative-font-size(1.1);
     font-weight: 600;
     margin: 0 0 $spacing-unit * 0.5 0;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.95);
+      margin-bottom: $spacing-unit * 0.35;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.85);
+      margin-bottom: $spacing-unit * 0.25;
+    }
 
     a {
       color: $text-color;
@@ -68,6 +117,16 @@
     color: $grey-color;
     font-weight: 500;
     margin: 0 0 $spacing-unit * 0.5 0;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.8);
+      margin-bottom: $spacing-unit * 0.35;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.75);
+      margin-bottom: $spacing-unit * 0.25;
+    }
   }
 
   p {
@@ -76,6 +135,18 @@
     line-height: 1.6;
     margin: 0 0 $spacing-unit * 0.5 0;
     flex-grow: 1;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.85);
+      margin-bottom: $spacing-unit * 0.35;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.8);
+      margin-bottom: $spacing-unit * 0.25;
+      line-height: 1.4;
+    }
   }
 
   .project-skills {
@@ -85,6 +156,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @include media-query($on-palm) {
+      gap: 6px;
+      margin-bottom: $spacing-unit * 0.35;
+    }
+
+    @media screen and (max-width: 400px) {
+      gap: 4px;
+      margin-bottom: $spacing-unit * 0.25;
+    }
   }
 
   .project-skill {
@@ -96,6 +177,18 @@
     border-radius: 999px;
     font-weight: 500;
     letter-spacing: 0.15px;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.7);
+      padding: 4px 8px;
+      border-width: 1px;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.65);
+      padding: 3px 6px;
+      border-width: 1px;
+    }
   }
 
   .read-more {
@@ -105,6 +198,14 @@
     font-weight: 600;
     transition: color 0.2s ease;
     align-self: flex-end;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.85);
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.8);
+    }
 
     &:hover {
       color: $text-color;
@@ -118,12 +219,30 @@
 // Project Detail Page
 .project-detail {
   margin: 0 $spacing-unit * 3;
+
+  @include media-query($on-palm) {
+    margin: 0 $spacing-unit;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin: 0 $spacing-unit * 0.5;
+  }
 }
 
 .project-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 2px solid $grey-color-light;
+
+  @include media-query($on-palm) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .project-title {
@@ -131,6 +250,16 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: $text-color;
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.75);
+    margin-bottom: 0.75rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.5);
+    margin-bottom: 0.5rem;
+  }
 }
 
 .project-meta-wrapper {
@@ -139,12 +268,32 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+
+  @include media-query($on-palm) {
+    gap: 0.75rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
+
 
 .project-info {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+
+  @include media-query($on-palm) {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 0.75rem;
+  }
 }
 
 .project-detail-skills {
@@ -156,6 +305,15 @@
   gap: 8px;
   justify-content: flex-end;
 
+  @include media-query($on-palm) {
+    gap: 6px;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 4px;
+  }
+
   .project-skill {
     @include relative-font-size(0.75);
     color: $text-color;
@@ -165,6 +323,18 @@
     border-radius: 999px;
     font-weight: 500;
     letter-spacing: 0.15px;
+
+    @include media-query($on-palm) {
+      @include relative-font-size(0.7);
+      padding: 4px 8px;
+      border-width: 1px;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.65);
+      padding: 3px 6px;
+      border-width: 1px;
+    }
   }
 }
 

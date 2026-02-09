@@ -38,6 +38,14 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit * 0.5;
+
+  @include media-query($on-palm) {
+    margin-bottom: $spacing-unit * 0.35;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: $spacing-unit * 0.25;
+  }
 }
 
 
@@ -79,6 +87,14 @@ figcaption {
  */
 ul, ol {
   margin-left: $spacing-unit;
+
+  @include media-query($on-palm) {
+    margin-left: $spacing-unit * 0.75;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-left: $spacing-unit * 0.5;
+  }
 }
 
 li {
@@ -135,6 +151,18 @@ blockquote {
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
+
+  @include media-query($on-palm) {
+    border-left-width: 3px;
+    padding-left: $spacing-unit * 0.35;
+    @include relative-font-size(1);
+  }
+
+  @media screen and (max-width: 400px) {
+    border-left-width: 2px;
+    padding-left: $spacing-unit * 0.25;
+    @include relative-font-size(0.9);
+  }
 
   > :last-child {
     margin-bottom: 0;
