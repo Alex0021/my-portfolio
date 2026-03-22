@@ -27,9 +27,9 @@ layout: default
   <footer class="project-footer">
     <nav class="project-nav">
       {%- if page.lang == "fr" or page.url contains "/fr/" -%}
-        <a href="{{ "/fr/" | relative_url }}" class="back-link">← Back to Projects</a>
+        <a href="{{ "/fr/" | relative_url }}#projects-section" class="back-link">← Back to Projects</a>
       {%- else -%}
-        <a href="{{ "/en" | relative_url }}" class="back-link">← Back to Projects</a>
+        <a href="{{ "/en" | relative_url }}#projects-section" class="back-link">← Back to Projects</a>
       {%- endif -%}
     </nav>
   </footer>

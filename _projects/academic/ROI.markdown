@@ -92,7 +92,7 @@ This ensured theoretical results translated to physical behavior.
 - Successful sim-to-real demonstration on micro drones  
 - IEEE-style research report documenting methodology  
 
-<a href="{{ "/assets/extras/RO1_LIS_Report_final.pdf" | relative_url }}">Read the project report →</a>
+<a href="{{ "/assets/extras/RO1_LIS_Report_final.pdf" | relative_url }}" target="_blank">Read the project report →</a>
 
 ---
 

@@ -58,7 +58,7 @@ I designed and evaluated a fusion scheme combining complementary sensor measurem
 
 **Project demo**
 
-► [Watch on Youtube]()
+► <a href="https://youtu.be/c9kShqK1qEU" target="_blank">Watch on Youtube</a>
 
 ---
 
