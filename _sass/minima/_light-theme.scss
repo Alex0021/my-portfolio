@@ -1,8 +1,88 @@
 /**
- * Light theme CSS custom properties
+ * Light theme - CSS custom properties
  */
-
 
 :root {
   color-scheme: light;
+
+  // Core colors
+  --color-bg: #fdfdfd;
+  --color-bg-secondary: #fafafa;
+  --color-bg-tertiary: #f8f8f8;
+  --color-bg-code: #eef;
+  --color-text: #111;
+  --color-text-secondary: #828282;
+  --color-text-muted: #555555;
+  --color-text-table: #{lighten(#111, 18%)};
+
+  // Brand / links
+  --color-link: #2a7ae2;
+  --color-link-visited: #{darken(#2a7ae2, 15%)};
+  --color-link-hover: #111;
+
+  // Borders
+  --color-border: #{lighten(#828282, 40%)};
+  --color-border-heavy: #{darken(lighten(#828282, 40%), 4%)};
+  --color-border-bottom-th: #{darken(lighten(#828282, 40%), 12%)};
+
+  // Surfaces (header, footer, cards)
+  --color-surface: white;
+  --color-surface-hover: #{lighten(#828282, 40%)};
+
+  // Hero
+  --hero-gradient-start: #fdfdfd;
+  --hero-gradient-end: #{lighten(lighten(#828282, 40%), 5%)};
+
+  // Project cards
+  --card-bg: white;
+  --card-border: #{lighten(#828282, 40%)};
+  --card-border-hover: #828282;
+  --card-shadow-hover: rgba(0, 0, 0, 0.08);
+
+  // Skills badges
+  --skill-color: #111;
+  --skill-border: #828282;
+
+  // Read more link
+  --read-more-color: #888888;
+  --read-more-visited: #555555;
+
+  // Theme toggle
+  --toggle-bg: white;
+  --toggle-border: #{lighten(#828282, 40%)};
+  --toggle-border-hover: #828282;
+
+  // Misc
+  --shadow-subtle: rgba(0, 0, 0, 0.04);
+  --shadow-medium: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.12);
+  --color-grey-dark: #{darken(#828282, 25%)};
+  --color-blockquote: #828282;
+  --color-blockquote-border: #{lighten(#828282, 40%)};
+
+  // Section title decoration
+  --section-title-line: #{darken(#828282, 25%)};
+
+  // Table
+  --table-row-even: #{lighten(lighten(#828282, 40%), 6%)};
+  --table-th-bg: #{lighten(lighten(#828282, 40%), 3%)};
+
+  // Project detail
+  --project-category-bg: #f8f8f8;
+  --project-category-color: #828282;
+
+  // Quote marks
+  --quote-mark-color: #828282;
+
+  // Social link buttons
+  --social-btn-bg: #{darken(#828282, 25%)};
+  --social-btn-hover: #111;
+
+  // Language switcher
+  --lang-current: #111;
+  --lang-link: #828282;
+  --lang-link-hover: #111;
+
+  // Nav
+  --nav-bg: white;
 }

@@ -44,12 +44,13 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
+// Theme files first: they define CSS custom properties used by all components.
 @import
+  "minima/light-theme",
+  "minima/dark-theme",
   "minima/base",
   "minima/layout",
   "minima/home",
   "minima/project",
-  "minima/syntax-highlighting",
-  "minima/light-theme",
-  "minima/dark-theme"
+  "minima/syntax-highlighting"
 ;

@@ -23,9 +23,9 @@
     @include relative-font-size(1.5);
     font-weight: 600;
     margin-bottom: $spacing-unit * 0.5;
-    color: $text-color;
+    color: var(--color-text);
     padding-bottom: $spacing-unit * 0.5;
-    border-bottom: 2px solid $grey-color-light;
+    border-bottom: 2px solid var(--color-border);
 
     @include media-query($on-palm) {
       @include relative-font-size(1.25);
@@ -56,10 +56,10 @@
 .project-card {
   padding: $spacing-unit;
   padding-bottom: $spacing-unit * 0.5;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--card-border);
   border-radius: 6px;
   transition: all 0.3s ease;
-  background-color: white;
+  background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -76,13 +76,13 @@
   }
 
   &:hover {
-    border-color: $grey-color;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: var(--card-border-hover);
+    box-shadow: 0 6px 16px var(--card-shadow-hover);
     transform: translateY(-4px);
 
     @include media-query($on-palm) {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px var(--card-shadow-hover);
     }
   }
 
@@ -102,19 +102,19 @@
     }
 
     a {
-      color: $text-color;
+      color: var(--color-text);
       text-decoration: none;
       transition: color 0.2s ease;
 
       &:hover {
-        color: $grey-color-dark;
+        color: var(--color-grey-dark);
       }
     }
   }
 
   p.project-meta {
     @include relative-font-size(0.9);
-    color: $grey-color;
+    color: var(--color-text-secondary);
     font-weight: 500;
     margin: 0 0 $spacing-unit * 0.5 0;
 
@@ -131,7 +131,7 @@
 
   p {
     @include relative-font-size(0.95);
-    color: $text-color;
+    color: var(--color-text);
     line-height: 1.6;
     margin: 0 0 $spacing-unit * 0.5 0;
     flex-grow: 1;
@@ -170,9 +170,9 @@
 
   .project-skill {
     @include relative-font-size(0.75);
-    color: $text-color;
+    color: var(--skill-color);
     background-color: transparent;
-    border: 1.5px solid $grey-color;
+    border: 1.5px solid var(--skill-border);
     padding: 5px 10px;
     border-radius: 999px;
     font-weight: 500;
@@ -193,7 +193,7 @@
 
   .read-more {
     @include relative-font-size(0.95);
-    color: #888888;
+    color: var(--read-more-color);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
@@ -208,10 +208,10 @@
     }
 
     &:hover {
-      color: $text-color;
+      color: var(--color-text);
     }
     &:visited {
-      color: #555555;
+      color: var(--read-more-visited);
     }
   }
 }
@@ -232,7 +232,7 @@
 .project-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid $grey-color-light;
+  border-bottom: 2px solid var(--color-border);
 
   @include media-query($on-palm) {
     margin-bottom: 1rem;
@@ -249,7 +249,7 @@
   @include relative-font-size(2.5);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: $text-color;
+  color: var(--color-text);
 
   @include media-query($on-palm) {
     @include relative-font-size(1.75);
@@ -316,9 +316,9 @@
 
   .project-skill {
     @include relative-font-size(0.75);
-    color: $text-color;
+    color: var(--skill-color);
     background-color: transparent;
-    border: 1.5px solid $grey-color;
+    border: 1.5px solid var(--skill-border);
     padding: 5px 10px;
     border-radius: 999px;
     font-weight: 500;
@@ -341,12 +341,12 @@
 .project-category,
 .project-date {
   @include relative-font-size(0.95);
-  color: $grey-color;
+  color: var(--project-category-color);
   font-weight: 500;
 }
 
 .project-category {
-  background-color: #f8f8f8;
+  background-color: var(--project-category-bg);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-transform: uppercase;
@@ -356,30 +356,30 @@
 .project-content {
   @include relative-font-size(1);
   line-height: 1.8;
-  color: $text-color;
+  color: var(--color-text);
 
   img {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
     margin: 2rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--shadow-medium);
   }
 }
 
 .project-footer {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--color-border);
 }
 
 .back-link {
-  color: $text-color;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 
   &:hover {
-    color: $grey-color-dark;
+    color: var(--color-grey-dark);
   }
 }

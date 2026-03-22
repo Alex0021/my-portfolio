@@ -4,7 +4,7 @@
 
 // Hero Section
 .hero-section {
-  background: linear-gradient(135deg, $background-color 0%, lighten($grey-color-light, 5%) 100%);
+  background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
   padding: $spacing-unit * 3 $spacing-unit;
   margin-bottom: $spacing-unit * 2;
 
@@ -43,19 +43,19 @@
 
 .hero-image {
   text-align: center;
-  
+
   .profile-pic {
     width: 280px;
     height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    border: 4px solid white;
+    box-shadow: 0 8px 24px var(--shadow-strong);
+    border: 4px solid var(--color-surface);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 12px 32px var(--shadow-strong);
     }
 
     @include media-query($on-palm) {
@@ -84,7 +84,7 @@
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 $spacing-unit * 0.5 0;
-    color: $text-color;
+    color: var(--color-text);
 
     @include media-query($on-palm) {
       @include relative-font-size(1.75);
@@ -98,7 +98,7 @@
 
   p.hero-subtitle {
     @include relative-font-size(1.25);
-    color: $grey-color;
+    color: var(--color-text-secondary);
     margin: 0 0 $spacing-unit 0;
     font-weight: 400;
     letter-spacing: 1px;
@@ -120,18 +120,18 @@
     padding: 0 0 0 $spacing-unit * 0.75;
     position: relative;
     font-style: italic;
-    color: $grey-color-dark;
+    color: var(--color-grey-dark);
     border-left: none;
     font-family: "Playfair Display", serif;
 
     &::before {
-      content: "“";
+      content: "\201C";
       position: absolute;
       left: -8px;
       top: -14px;
       font-size: 3rem;
       line-height: 1;
-      color: $grey-color;
+      color: var(--quote-mark-color);
     }
   }
 
@@ -142,25 +142,34 @@
     padding-right: 1.4rem;
     font-size: 1.5rem;
 
+    @media screen and (max-width: 400px) {
+      font-size: 1.2rem;
+    }
+
     &::after {
-      content: "”";
+      content: "\201D";
       position: absolute;
       right: 0;
       bottom: 0rem;
       font-size: 3rem;
       line-height: 1;
-      color: $grey-color;
+      color: var(--quote-mark-color);
     }
   }
 
   > p {
     @include relative-font-size(1.05);
-    color: $text-color;
+    color: var(--color-text);
     line-height: 1.8;
     margin-bottom: $spacing-unit;
     text-align: justify;
     @media screen and (min-width: 800px) {
       padding-right: $spacing-unit * 2;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include relative-font-size(0.95);
+      line-height: 1.6;
     }
   }
 }
@@ -172,12 +181,20 @@
 
   @include media-query($on-palm) {
     flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-unit * 0.5;
+    margin-top: $spacing-unit;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: $spacing-unit * 0.4;
+    margin-top: $spacing-unit * 0.75;
   }
 
   .social-link {
     display: inline-block;
     padding: 10px 24px;
-    background-color: $grey-color-dark;
+    background-color: var(--social-btn-bg);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -185,10 +202,20 @@
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
 
+    @media screen and (max-width: 400px) {
+      padding: 8px 16px;
+      font-size: $base-font-size * 0.85;
+    }
+
     &:hover {
-      background-color: $text-color;
+      background-color: var(--social-btn-hover);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px var(--shadow-medium);
+      color: white;
+    }
+
+    &:visited {
+      color: white;
     }
   }
 }
@@ -196,9 +223,9 @@
 // Projects Section - card and grid styles moved to _project.scss
 .projects-section {
   padding: $spacing-unit * 1 0;
-  background-color: white;
-  border-bottom: 1px solid $grey-color-light;
-  
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+
   .wrapper {
     padding: 0 $spacing-unit;
 
@@ -213,9 +240,20 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: $spacing-unit * 2;
-  color: $text-color;
+  color: var(--color-text);
   position: relative;
   padding-bottom: $spacing-unit;
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.5);
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
+  @media screen and (max-width: 400px) {
+    @include relative-font-size(1.3);
+    margin-bottom: $spacing-unit;
+    padding-bottom: $spacing-unit * 0.75;
+  }
 
   &::after {
     content: "";
@@ -225,7 +263,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: $grey-color-dark;
+    background-color: var(--section-title-line);
     border-radius: 2px;
   }
 }
