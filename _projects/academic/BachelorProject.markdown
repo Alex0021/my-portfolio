@@ -2,49 +2,40 @@
 layout: project
 category: academic
 date: 01-05-2023
-title: Bachelor’s Capstone – Industrial Relay Monitoring Platform
+title: Bachelor's Capstone -- Industrial Relay Monitoring Platform
 skills:
   - Linux
-  - Comunication protocol
+  - Communication Protocol
   - API
   - C++
   - System Architecture
 ---
 
-## Overview
+Team capstone project building a platform to monitor and control industrial protection relays from multiple vendors --- standardizing communication between field hardware and supervisory software.
 
-This bachelor’s capstone project focused on building a platform to monitor and control industrial protection relays from multiple vendors. The goal was to standardize communication between field hardware and higher-level software, enabling reliable remote interaction with industrial equipment.
-
-The project was completed in a team of six, emphasizing system integration, collaboration, and real-world engineering constraints.
-
----
-
-## Project Scope
-
-The system acted as a bridge between industrial relays and a supervisory interface, supporting standardized communication and structured data exchange. The work involved combining hardware interaction, protocol handling, and software architecture in a cohesive platform.
-
-<div style="display:flex; justify-content:center">
-<img src="{{ "/assets/images/RELAIS_Schema_V3.jpg" | relative_url }}" width="1000">
+<div class="img-center">
+  <img src="{{ "/assets/images/RELAIS_Schema_V3.jpg" | relative_url }}" width="800" alt="System architecture diagram">
 </div>
 
-Due to client sensitivity, implementation details are intentionally kept high-level.
+*Due to client sensitivity, implementation details are kept high-level.*
 
 ---
 
-## My Contribution
+## Problem
 
-I worked on the development of the processing unit software in **C++**, focusing on:
-
-- Implementing an API layer for system interaction  
-- Managing communication with relays via the **IEC 61850** protocol  
-- Structuring data flow between hardware and software components  
-
-This required a detailed understanding of the relay communication protocol (IEC 61850) and reliable synchronization with the system database to securely store and organize operational data.
+Industrial relays from different vendors speak different protocols. Remote monitoring and control required a unified bridge between heterogeneous hardware and higher-level software, with reliable data handling and storage.
 
 ---
 
-## Takeaway
+## Approach
 
-This project gave me practical insight into the challenges of integrating industrial communication protocols into custom-built APIs and data acquisition systems. It highlighted the importance of reliability, structured data handling, and clear interface design when working with real hardware.
+- **Processing unit in C++** with an API layer for system interaction
+- **IEC 61850 protocol** integration for relay communication
+- Structured data flow between hardware, software, and system database
+- Team of six with clear module responsibilities
 
-The work represented the first phase of a larger initiative aimed at centralizing live device data for future AI-driven analysis, with the long-term goal of enabling predictive maintenance strategies.
+---
+
+## Outcome
+
+A working monitoring platform bridging multi-vendor relays to a centralized interface. The project was the first phase of a larger initiative aimed at enabling AI-driven predictive maintenance from live device data.

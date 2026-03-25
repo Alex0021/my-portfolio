@@ -365,6 +365,81 @@
     margin: 2rem 0;
     box-shadow: 0 4px 12px var(--shadow-medium);
   }
+
+  // Image layout utilities
+  .img-center {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .img-row {
+    display: flex;
+    gap: $spacing-unit;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5rem 0;
+
+    @include media-query($on-palm) {
+      gap: $spacing-unit * 0.5;
+    }
+
+    img {
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .img-side {
+    display: flex;
+    gap: $spacing-unit * 1.5;
+    align-items: center;
+    margin: 1.5rem 0;
+
+    @include media-query($on-palm) {
+      flex-direction: column;
+      gap: $spacing-unit * 0.75;
+    }
+
+    > p {
+      flex: 1;
+      margin: 0;
+    }
+
+    > img {
+      margin: 0;
+      max-width: 300px;
+
+      @include media-query($on-palm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // Status badge for ongoing projects
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: $base-font-size * 0.8;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  // Links section at the bottom
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-unit * 0.5;
+    margin-top: 1.5rem;
+
+    a {
+      font-weight: 600;
+    }
+  }
 }
 
 .project-footer {

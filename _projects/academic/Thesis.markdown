@@ -11,82 +11,39 @@ skills:
   - Adaptive controller
 ---
 
-## Overview
+Investigating how aerial swarm interfaces can adapt in real time to a pilot's cognitive state, using eye tracking to dynamically adjust swarm behavior and reduce operator overload.
 
-<div style="display:flex; gap:50px; justify-content:center;">
-<p>
-<br><br>
-This thesis explores how aerial swarm control interfaces can adapt in real time to a pilot’s cognitive state. Instead of treating swarm control as a fixed interaction, the system dynamically adjusts swarm behavior based on estimated stress and cognitive load.
-<br><br>
-The goal is to reduce operator overload while keeping the pilot engaged — supporting safe and efficient human-in-the-loop swarm operation.
-</p>
-<img src="{{ "/assets/images/ChatGPT-Thesis_poster_v2.png" | relative_url }}" width="300">
+<span class="status-badge">Ongoing</span>
+
+<div class="img-side" markdown="1">
+
+Controlling a drone swarm is cognitively demanding. Workload varies with task complexity and pilot experience, yet current interfaces rarely account for the operator's state. This thesis designs a system that monitors cognitive load via eye tracking and adapts swarm autonomy accordingly --- keeping the pilot engaged without overwhelming them.
+
+![Thesis concept poster]({{ "/assets/images/ChatGPT-Thesis_poster_v2.png" | relative_url }}){: width="300"}
+
 </div>
-
-
----
-
-## Problem
-
-Controlling an aerial swarm introduces high cognitive demand due to the number of agents and system degrees of freedom. This workload varies with task complexity and pilot experience.
-
-Excessive demand can lead to overload, while insufficient challenge reduces engagement. Both conditions degrade performance in human-supervised robotics.
-
-Current swarm interfaces rarely account for the pilot’s cognitive state, leaving adaptation entirely manual.
-
----
-
-## What Is Novel
-
-This work investigates **user-adaptive swarm control**, where swarm behavior responds to real-time estimates of pilot cognitive load.
-
-Key innovations include:
-
-- Eye-tracking-based cognitive state estimation  
-- Dynamic mapping between user state and swarm behavior  
-- Maintaining operator engagement and responsiveness  
-- Human-centered adaptation within swarm autonomy  
-
-Rather than optimizing only robot performance, the system explicitly optimizes the **human–swarm interaction loop**.
 
 ---
 
 ## Approach
 
-### Cognitive state estimation
-
-High-frequency eye tracking is used to infer indicators of **cognitive load**.
-
-### Adaptive swarm interface
-
-A Unity-based simulation environment enables rapid testing of different scenarios.
-
-### Validation pipeline
-
-The system will be evaluated through controlled user studies measuring:
-
-- Task performance  
-- Cognitive load metrics  
-- Engagement stability  
-
-A hardware validation phase with DJI drones is planned to test transfer beyond simulation.
+- **Cognitive state estimation** from high-frequency eye tracking data
+- **Adaptive swarm interface** in Unity, dynamically mapping pilot state to swarm behavior
+- **User studies** measuring task performance, cognitive load, and engagement stability
+- **Hardware validation** planned with DJI drones for sim-to-real transfer
 
 ---
 
 ## Current Status
 
-- Literature review completed  
-- Cognitive load estimation pipeline under development  
-- Unity swarm simulation environment in progress  
+- Literature review completed
+- Cognitive load estimation pipeline under development
+- Unity swarm simulation environment in progress
 
 ---
 
-## Expected Impact
+## Expected Outcome
 
-This work explores how adaptive autonomy can improve human performance in complex robotic systems. The framework may inform future swarm interfaces that actively support operator decision-making instead of passively executing commands.
+A framework where swarm autonomy actively supports operator decision-making instead of passively executing commands --- informing future human-swarm interaction design.
 
----
-
-## More info to come
-
-**Stay updated!**
+**More info to come --- stay tuned!**

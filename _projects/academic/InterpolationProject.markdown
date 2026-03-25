@@ -10,26 +10,31 @@ skills:
   - Eigen Lib
 ---
 
-► Find <a href="https://github.com/Alex0021/InterpolationProject" target="_blank">here</a> the repo with more details
-
-This project was developed as part of a C++ course, with the objective of revisiting core language concepts while building a mathematically grounded application using modern libraries.
+Built a 2D interpolation application in modern C++ as part of a programming course --- reading matrix data from files and computing interpolated functions using multiple methods.
 
 ---
 
-## What?
+## Problem
 
-We designed an interpolation application that reads matrices from an input file and computes a 2D interpolated function based on the selected method. The program emphasizes clean data handling, numerical computation, and structured software design.
-
----
-
-## Learning Outcomes
-
-The main goal was to become comfortable with modern C++ standards (C++20/23) while leveraging robust mathematical libraries such as *Eigen* for linear algebra operations.
-
-Beyond syntax and features, the project was a valuable reminder of fundamental software engineering principles — even for small applications. Planning architecture early, defining clear module responsibilities, and designing clean interfaces proved essential to avoid unnecessary features and ensure components integrate smoothly.
+Revisit core C++ concepts while building something mathematically grounded. The goal was to gain fluency with C++20 features and the Eigen linear algebra library through a structured, testable application.
 
 ---
 
-## What It Represents for Me
+## Approach
 
-This project was an opportunity to strengthen my C++ proficiency after primarily working in Python. It reinforced the importance of writing structured, efficient, and well-organized code in a statically typed language.
+- Matrix I/O parsing with structured data handling
+- Multiple interpolation methods implemented and compared
+- Clean module separation with defined interfaces
+- Test suite using CTest for validation
+
+---
+
+## Outcome
+
+A working interpolation tool that reinforced modern C++ practices (templates, smart pointers, structured bindings) and the importance of planning architecture early --- even for small applications.
+
+<div class="project-links" markdown="1">
+
+[View on GitHub](https://github.com/Alex0021/InterpolationProject){:target="_blank"}
+
+</div>

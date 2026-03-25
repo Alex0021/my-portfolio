@@ -2,7 +2,7 @@
 layout: project
 category: academic
 date: 01-05-2022
-title: Sensor Fusion for Height monitoring
+title: Sensor Fusion for Height Monitoring
 skills:
   - Sensors
   - Embedded
@@ -12,56 +12,35 @@ skills:
   - Realtime
 ---
 
-## Overview
+Solo project developing a sensor fusion scheme to estimate vertical position and detect levitation on a prototype Hyperloop pod, as part of the Polyloop student initiative.
 
-This solo project focused on developing a sensor fusion scheme to accurately estimate vertical position and detect levitation on a prototype Hyperloop pod as part of the Polyloop student initiative. 
-
-<div style="display:flex; justify-content:center">
-<img src="{{ "/assets/images/Schéma_global_projet.svg" | relative_url }}" width="800">
+<div class="img-center">
+  <img src="{{ "/assets/images/Schéma_global_projet.svg" | relative_url }}" width="800" alt="System overview">
 </div>
-
-The challenge was to combine noisy sensor measurements into a stable, real-time height estimate suitable for physical validation.
 
 ---
 
 ## Problem
 
-Detecting levitation requires precise height estimation despite sensor noise, drift, and environmental variability. A single sensor is often insufficient, making robust data fusion essential for reliable state estimation.
+Detecting levitation requires precise real-time height estimation despite sensor noise, drift, and environmental variability. A single sensor is insufficient --- robust data fusion is essential.
 
 ---
 
 ## Approach
 
-I designed and evaluated a fusion scheme combining complementary sensor measurements to improve stability and responsiveness. The work involved:
-
-- Sensor characterization and noise analysis  
-- Fusion strategy design and tuning  
-- Real-time signal processing  
-- Experimental validation on a physical prototype  
+- Sensor characterization and noise analysis
+- Fusion strategy design: from simple complementary filters to linear Kalman filtering
+- Real-time signal processing on embedded hardware (I2C, UART)
+- Iterative tuning and experimental validation on a physical prototype
 
 ---
 
-## Highlights
+## Outcome
 
-- End-to-end ownership of system design and validation  
-- Practical sensor fusion, including simple complementary filter up to a more complex Kalman (linear) filter
-- Experimental debugging and iterative tuning  
-- Bridging theory with hardware testing  
+A working height estimation pipeline validated on hardware, bridging estimation theory with real-world sensor constraints.
 
----
+<div class="project-links" markdown="1">
 
-## Demo & Extras
+[Project poster (PDF, French)]({{ "/assets/extras/Affiche-Projet3.pdf" | relative_url }}){:target="_blank"} --- [Watch the demo](https://youtu.be/c9kShqK1qEU){:target="_blank"}
 
-**One pager project poster**
-
-► <a href="{{ "/assets/extras/Affiche-Projet3.pdf" | relative_url }}" target="_blank">Here is the PDF (In french)</a>
-
-**Project demo**
-
-► <a href="https://youtu.be/c9kShqK1qEU" target="_blank">Watch on Youtube</a>
-
----
-
-## Takeaway
-
-This project strengthened my understanding of sensor behavior, signal fusion, and experimental validation in embedded systems. It highlighted how theoretical estimation techniques translate into real-world constraints when interacting with physical hardware.
+</div>
