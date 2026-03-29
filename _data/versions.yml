@@ -1,9 +1,9 @@
 # Complete version history with changelogs
 # Format: tag, name, date, and major_changes (array of brief descriptions)
 
-- tag: "v1.1.0"
+- tag: "v1.2.0"
   name: "French completed"
-  date: "2026-04-10"
+  date: "2026-03-29"
   description: "Added new features and improvements"
   major_changes:
     - "Completed the French version of the website"
