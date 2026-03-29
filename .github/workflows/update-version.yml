@@ -1,0 +1,45 @@
+name: Update Version on Tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version info from tag
+        run: |
+          TAG_NAME=${{ github.ref_name }}
+          TAG_MESSAGE=$(git tag -l --format='%(contents)' $TAG_NAME)
+          CURRENT_DATE=$(date -u +"%Y-%m-%d")
+
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          echo "TAG_MESSAGE=$TAG_MESSAGE" >> $GITHUB_ENV
+          echo "CURRENT_DATE=$CURRENT_DATE" >> $GITHUB_ENV
+
+      - name: Update version.yml
+        run: |
+          cat > _data/version.yml << EOF
+          # This file is auto-updated by the GitHub Actions workflow on each tag push.
+          # You can also update it manually before pushing.
+          tag: "${{ env.TAG_NAME }}"
+          name: "${{ env.TAG_MESSAGE }}"
+          date: "${{ env.CURRENT_DATE }}"
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _data/version.yml
+          git commit -m "chore: update version to ${{ env.TAG_NAME }} [skip ci]"
+          git push

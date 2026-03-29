@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<article class="version-history">
+  <header class="version-history-header">
+    <h1 class="version-history-title">{{ page.title }}</h1>
+    <p class="version-history-description">{{ page.description }}</p>
+  </header>
+
+  <div class="version-timeline">
+    {%- for version in site.data.versions -%}
+    <div class="version-entry">
+      <div class="version-marker"></div>
+
+      <div class="version-card">
+        <div class="version-header">
+          <div class="version-title-group">
+            <h2 class="version-name">{{ version.name }}</h2>
+            <span class="version-tag">{{ version.tag }}</span>
+          </div>
+          <span class="version-date">{{ version.date }}</span>
+        </div>
+
+        <p class="version-description">{{ version.description }}</p>
+
+        {%- if version.major_changes -%}
+        <ul class="version-changes">
+          {%- for change in version.major_changes -%}
+          <li class="version-change">{{ change }}</li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- endfor -%}
+  </div>
+
+  <footer class="version-footer">
+    <nav class="version-nav">
+      {%- if page.lang == "fr" or page.url contains "/fr/" -%}
+        <a href="{{ "/fr" | relative_url }}" class="back-link">← Retour à l'accueil</a>
+      {%- else -%}
+        <a href="{{ "/en" | relative_url }}" class="back-link">← Back to Home</a>
+      {%- endif -%}
+    </nav>
+  </footer>
+</article>

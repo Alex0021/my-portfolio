@@ -1,0 +1,28 @@
+# Complete version history with changelogs
+# Format: tag, name, date, and major_changes (array of brief descriptions)
+
+- tag: "v1.1.0"
+  name: "French completed"
+  date: "2026-04-10"
+  description: "Added new features and improvements"
+  major_changes:
+    - "Completed the French version of the website"
+    - "Added About Me and Skills pages"
+    - "Added this version history page"
+
+- tag: "v1.0.0"
+  name: "Mobile Support"
+  date: "2026-03-25"
+  description: "First major update"
+  major_changes:
+    - "Added support for mobile devices"
+    - "Fixed theme implementation"
+
+- tag: "v0.0.0"
+  name: "Initial Release"
+  date: "2026-02-15"
+  description: "Initial launch of portfolio website"
+  major_changes:
+    - "Foundation of the portfolio website with basic structure"
+    - "Only enabled English language support"
+    - "Only projects section filled"

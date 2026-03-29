@@ -1,0 +1,5 @@
+# This file is auto-updated by the GitHub Actions workflow on each deploy.
+# You can also update it manually before pushing.
+tag: "v1.0.0"
+name: "First Release"
+date: "2026-03-25"
