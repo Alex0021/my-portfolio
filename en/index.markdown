@@ -1,6 +1,6 @@
 ---
 hooktitle: Alexandre Hebert
-subtitle: Robotics Engineer & Enthousiast
+subtitle: Robotics & Automation Engineer
 motd: Try it. Break it. Understand it.
 layout: home
 lang: en

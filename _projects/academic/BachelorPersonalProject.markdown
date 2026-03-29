@@ -12,19 +12,15 @@ skills:
   - Realtime
 ---
 
-Solo project developing a sensor fusion scheme to estimate vertical position and detect levitation on a prototype Hyperloop pod, as part of the Polyloop student initiative.
+## How can we accurately estimate vertical position and detect levitation on a moving platform despite sensor noise and environmental variability?
 
 <div class="img-center">
   <img src="{{ "/assets/images/Schéma_global_projet.svg" | relative_url }}" width="800" alt="System overview">
 </div>
 
----
-
 ## Problem
 
 Detecting levitation requires precise real-time height estimation despite sensor noise, drift, and environmental variability. A single sensor is insufficient --- robust data fusion is essential.
-
----
 
 ## Approach
 
@@ -32,8 +28,6 @@ Detecting levitation requires precise real-time height estimation despite sensor
 - Fusion strategy design: from simple complementary filters to linear Kalman filtering
 - Real-time signal processing on embedded hardware (I2C, UART)
 - Iterative tuning and experimental validation on a physical prototype
-
----
 
 ## Outcome
 

@@ -11,7 +11,7 @@ skills:
   - Sim2Real
 ---
 
-Explored how decentralized aerial drones can optimize collective viewing coverage using only locally detected neighbors --- from custom simulation to real Crazyflie swarm demonstrations.
+## How can decentralized aerial drones optimize collective viewing coverage using only local neighbor information, without centralized coordination?
 
 <div class="img-row">
   <img src="{{ "/assets/images/2d_swarm_9_drones_zoom.png" | relative_url }}" width="280" alt="2D swarm simulation">
@@ -19,21 +19,15 @@ Explored how decentralized aerial drones can optimize collective viewing coverag
   <img src="{{ "/assets/images/real_cf_wswarm7_dark.png" | relative_url }}" width="294" alt="Real Crazyflie swarm">
 </div>
 
----
-
 ## Problem
 
 Swarm robotics often assumes global information, which is unrealistic for real aerial systems. The challenge: can drones coordinate their viewing direction using only local neighbor detection?
-
----
 
 ## Approach
 
 - **Custom Python simulator** with configurable neighbor selection, viewing algorithms, noise models, and automated parameter sweeps
 - **Quantitative comparison** of multiple viewing strategies through reproducible experiment batches
 - **Sim-to-real validation** on Crazyflie micro drones via ROS2, confirming that simulation results transfer to physical behavior
-
----
 
 ## Outcome
 

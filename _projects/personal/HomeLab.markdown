@@ -13,8 +13,6 @@ skills:
 
 What started as running Home Assistant for a few automations quickly escalated into a fully virtualized home infrastructure. Like many post-pandemic homelabbers, curiosity got the better of me.
 
----
-
 ## What I Built
 
 The lab runs on **Proxmox VE** with a **pfSense firewall** for routing and network segmentation. Services are isolated into VMs and containers so experiments don't take everything down --- *most of the time*.
@@ -26,8 +24,6 @@ The lab runs on **Proxmox VE** with a **pfSense firewall** for routing and netwo
 This all looks like a well-organized structure --- **until something breaks** (don't ask).
 
 Current stacks include monitoring & dashboards, a Docker playground for quick experiments, a media server that became a surprisingly practical family setup, home automations (I really geek out on this), and various OS workstations --- because you need every OS ;)
-
----
 
 ## Why It Matters to Me
 

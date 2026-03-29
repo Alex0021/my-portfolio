@@ -19,13 +19,9 @@ Team capstone project building a platform to monitor and control industrial prot
 
 *Due to client sensitivity, implementation details are kept high-level.*
 
----
-
 ## Problem
 
 Industrial relays from different vendors speak different protocols. Remote monitoring and control required a unified bridge between heterogeneous hardware and higher-level software, with reliable data handling and storage.
-
----
 
 ## Approach
 
@@ -33,8 +29,6 @@ Industrial relays from different vendors speak different protocols. Remote monit
 - **IEC 61850 protocol** integration for relay communication
 - Structured data flow between hardware, software, and system database
 - Team of six with clear module responsibilities
-
----
 
 ## Outcome
 

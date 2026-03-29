@@ -92,9 +92,13 @@
     padding: $spacing-unit * 0.5 0;
     border-bottom: 2px solid transparent;
 
-    // Gaps between nav items, but not on the last one
+    // Gaps between nav items
     &:not(:last-child) {
-      margin-right: $spacing-unit * 1.5;
+      margin-right: $spacing-unit * 0.75;
+    }
+
+    &:last-child {
+      margin-right: $spacing-unit * 1.25;
     }
 
     &:hover {
@@ -383,6 +387,41 @@
   .footer-col {
     margin-bottom: $spacing-unit * 0.35;
     padding-left: $spacing-unit * 0.35;
+  }
+}
+
+.footer-meta {
+  text-align: center;
+  padding: $spacing-unit * 0.5 0;
+  margin-top: $spacing-unit * 0.25;
+  border-top: 1px solid var(--color-border);
+  @include relative-font-size(0.75);
+  color: var(--color-text-secondary);
+}
+
+.footer-version-icon {
+  margin-right: 4px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.footer-version {
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.footer-separator {
+  margin: 0 $spacing-unit * 0.25;
+}
+
+.footer-version-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-text);
+    text-decoration: underline;
   }
 }
 

@@ -11,7 +11,7 @@ skills:
   - Adaptive controller
 ---
 
-Investigating how aerial swarm interfaces can adapt in real time to a pilot's cognitive state, using eye tracking to dynamically adjust swarm behavior and reduce operator overload.
+## Can we optimize aerial swarm pilot performance by adapting swarm autonomy in real time based on the pilot's cognitive state?
 
 <span class="status-badge">Ongoing</span>
 
@@ -23,8 +23,6 @@ Controlling a drone swarm is cognitively demanding. Workload varies with task co
 
 </div>
 
----
-
 ## Approach
 
 - **Cognitive state estimation** from high-frequency eye tracking data
@@ -32,15 +30,11 @@ Controlling a drone swarm is cognitively demanding. Workload varies with task co
 - **User studies** measuring task performance, cognitive load, and engagement stability
 - **Hardware validation** planned with DJI drones for sim-to-real transfer
 
----
-
 ## Current Status
 
 - Literature review completed
 - Cognitive load estimation pipeline under development
 - Unity swarm simulation environment in progress
-
----
 
 ## Expected Outcome
 

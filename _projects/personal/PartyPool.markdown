@@ -13,13 +13,9 @@ skills:
 
 A DIY LED light show for the pool, built with Arduino and WLED --- because every pool party deserves synchronized lighting.
 
----
-
 ## What I Built
 
 Custom addressable LED strips controlled via WLED firmware on an ESP microcontroller, with reactive lighting effects and wireless control. A fun weekend project that combines electronics, firmware, and the satisfaction of making things glow.
-
----
 
 ## Why It Matters to Me
 

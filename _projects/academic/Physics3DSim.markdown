@@ -11,15 +11,15 @@ skills:
   - Agile Workflow
 ---
 
-Built a 3D physics simulation engine from the ground up in Java --- implementing rendering, collision detection, and rigid body dynamics without external physics libraries.
+## What are the core computational principles behind a physics engine, and how do we implement them from scratch?
 
----
+<div class="img-center">
+  <img src="{{ "/assets/images/ProjetSIM_EngineSim3D_CoverImage.png" | relative_url }}" width="1000" alt="3D Physics Engine Simulator in Java">
+</div>
 
 ## Problem
 
 Understand how physics engines work under the hood by building one from scratch: 3D rendering pipeline, vector math, collision resolution, and real-time simulation loop.
-
----
 
 ## Approach
 
@@ -27,8 +27,6 @@ Understand how physics engines work under the hood by building one from scratch:
 - Linear algebra operations for transformations and projections
 - Rigid body dynamics with basic collision handling
 - Agile team workflow with iterative feature development
-
----
 
 ## Outcome
 

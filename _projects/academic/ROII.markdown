@@ -11,28 +11,22 @@ skills:
   - UAV
 ---
 
-Designed an MPC-based controller for autonomous drone inspection that enforces Visual Line-Of-Sight (VLOS) with the operator --- a real Swiss regulatory requirement.
+## Can we maintain autonomous inspection performance while strictly enforcing Visual Line-Of-Sight (VLOS) contact with a ground operator?
 
 <div class="img-row">
   <img src="{{ "/assets/images/Human_VLOS_drone_inspection.jpg" | relative_url }}" width="350" alt="VLOS drone inspection concept">
   <img src="{{ "/assets/images/ROII_project_cover_page.png" | relative_url }}" width="350" alt="Project cover">
 </div>
 
----
-
 ## Problem
 
 Autonomous inspection drones must simultaneously follow an inspection path, stay visible to a ground operator, respect distance limits, and avoid occlusions. Traditional planners often optimize one objective at the expense of others.
-
----
 
 ## Approach
 
 - **Nonlinear MPC formulation** jointly optimizing path tracking, drone stability, operator visibility, and camera alignment
 - **Slack variables** for constraint smoothing and feasibility guarantees
 - **Progressive scenario testing** in MATLAB: baseline inspection, constraint-driven interruption, and occlusion-aware planning
-
----
 
 ## Outcome
 

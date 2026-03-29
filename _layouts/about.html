@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<article class="about-page">
+
+  <header class="about-header">
+    <p class="about-tagline">{{ page.tagline }}</p>
+  </header>
+
+  {%- if page.quotes -%}
+  <section class="about-quotes-section">
+    <div class="about-quotes-grid">
+      {%- for quote in page.quotes -%}
+      <blockquote class="about-quote-card">
+        <p class="about-quote-text">{{ quote.text }}</p>
+        <footer class="about-quote-source">{{ quote.source }}</footer>
+      </blockquote>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {%- if content and content != "" -%}
+  <section class="about-intro">
+    {{ content }}
+  </section>
+  {%- endif -%}
+
+  {%- if page.values -%}
+  <section class="about-section">
+    <h2 class="about-section-title">{{ page.values_title | default: "Core values" }}</h2>
+    <div class="about-values-grid">
+      {%- for value in page.values -%}
+      <div class="about-value-card">
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {%- if page.day_section -%}
+  <section class="about-section">
+    <h2 class="about-section-title">{{ page.day_title | default: "A typical day" }}</h2>
+    <div class="about-timeline">
+      {%- for block in page.day_section -%}
+      <div class="about-timeline-block">
+        <span class="about-timeline-time">{{ block.time }}</span>
+        <div class="about-timeline-content">
+          <strong>{{ block.label }}</strong>
+          <p>{{ block.detail }}</p>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {%- if page.toolbox -%}
+  <section class="about-section">
+    <h2 class="about-section-title">{{ page.toolbox_title | default: "Toolbox snapshot" }}</h2>
+    <div class="about-toolbox">
+      {%- for group in page.toolbox -%}
+      <div class="about-toolbox-group">
+        <h4>{{ group.category }}</h4>
+        <ul>
+          {%- for item in group.items -%}
+          <li>{{ item }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+</article>
