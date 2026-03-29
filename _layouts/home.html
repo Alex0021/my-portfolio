@@ -24,12 +24,12 @@ layout: default
   <!-- Projects Section -->
   <section class="projects-section" id="projects-section">
     <div class="wrapper">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title">{% if page.lang == "fr" %}Projets{% else %}Featured Projects{% endif %}</h2>
       
       <div class="projects-grid">
         <!-- Academic Projects -->
         <div class="project-category">
-          <h3 class="category-title">Academic</h3>
+          <h3 class="category-title">{% if page.lang == "fr" %}Académique{% else %}Academic{% endif %}</h3>
           <div class="projects-list">
             {%- if page.lang == "fr" -%}
               {%- assign academic = site.projects_fr | where: "category", "academic" | sort: "date" | reverse -%}
@@ -56,7 +56,7 @@ layout: default
 
         <!-- Personal Projects -->
         <div class="project-category">
-          <h3 class="category-title">Personal</h3>
+          <h3 class="category-title">{% if page.lang == "fr" %}Personnel{% else %}Personal{% endif %}</h3>
           <div class="projects-list">
             {%- if page.lang == "fr" -%}
               {%- assign personal = site.projects_fr | where: "category", "personal" | sort: "date" | reverse -%}
