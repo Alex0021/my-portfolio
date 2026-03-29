@@ -1,0 +1,189 @@
+/**
+ * Skills page styles
+ */
+
+.skills-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+
+  @include media-query($on-palm) {
+    padding: 0 $spacing-unit * 0.75;
+  }
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: $spacing-unit * 2;
+  padding-bottom: $spacing-unit;
+  border-bottom: 1px solid var(--color-border);
+
+  @include media-query($on-palm) {
+    margin-bottom: $spacing-unit * 1.5;
+  }
+}
+
+.skills-title {
+  @include relative-font-size(2.25);
+  font-weight: 700;
+  margin-bottom: $spacing-unit * 0.35;
+  color: var(--color-text);
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.75);
+  }
+}
+
+.skills-tagline {
+  @include relative-font-size(1.1);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+// Skill groups grid
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-unit * 1.25;
+  margin-bottom: $spacing-unit * 2;
+}
+
+.skills-group {
+  padding: $spacing-unit;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+
+  @include media-query($on-palm) {
+    padding: $spacing-unit * 0.75;
+  }
+}
+
+.skills-group-title {
+  @include relative-font-size(1.1);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 $spacing-unit * 0.5 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.0);
+  }
+}
+
+.skills-group-desc {
+  @include relative-font-size(0.85);
+  color: var(--color-text-secondary);
+  margin: 0 0 $spacing-unit * 0.6 0;
+  line-height: 1.5;
+}
+
+// Chip container
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+// Base chip
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  @include relative-font-size(0.82);
+  font-weight: 500;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+// Learning/developing chip
+.skill-chip--learning {
+  background-color: transparent;
+  border: 1px dashed var(--color-link);
+  color: var(--color-text-secondary);
+
+  &::after {
+    content: " ↗";
+    @include relative-font-size(0.75);
+    color: var(--color-link);
+    margin-left: 2px;
+  }
+}
+
+// "Currently developing" subsection
+.skills-developing {
+  margin-top: $spacing-unit * 0.6;
+  padding-top: $spacing-unit * 0.5;
+  border-top: 1px solid var(--color-border);
+}
+
+.skills-developing-label {
+  display: block;
+  @include relative-font-size(0.75);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin-bottom: $spacing-unit * 0.35;
+}
+
+// Languages section
+.skills-section {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.skills-section-title {
+  @include relative-font-size(1.35);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: $spacing-unit * 0.75;
+  padding-bottom: $spacing-unit * 0.3;
+  border-bottom: 2px solid var(--color-border);
+
+  @include media-query($on-palm) {
+    @include relative-font-size(1.2);
+  }
+}
+
+.skills-languages {
+  display: flex;
+  gap: $spacing-unit * 0.75;
+  flex-wrap: wrap;
+}
+
+.language-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-unit * 0.5 $spacing-unit;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-surface);
+  min-width: 120px;
+
+  strong {
+    @include relative-font-size(0.95);
+    color: var(--color-text);
+    margin-bottom: 4px;
+  }
+
+  .language-level {
+    @include relative-font-size(0.8);
+    color: var(--color-text-secondary);
+  }
+}
+
+.skills-extra {
+  @include relative-font-size(0.95);
+  line-height: 1.7;
+  color: var(--color-text);
+
+  p {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+}

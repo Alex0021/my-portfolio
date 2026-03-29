@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<article class="skills-page">
+
+  <header class="skills-header">
+    <h1 class="skills-title">{{ page.title | escape }}</h1>
+    <p class="skills-tagline">{{ page.tagline }}</p>
+  </header>
+
+  {%- if page.languages -%}
+  <section class="skills-section">
+    <h2 class="skills-section-title">{{ page.languages_title | default: "Languages" }}</h2>
+    <div class="skills-languages">
+      {%- for lang in page.languages -%}
+      <div class="language-card">
+        <strong>{{ lang.name }}</strong>
+        <span class="language-level">{{ lang.level }}</span>
+      </div>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {%- if page.skill_groups -%}
+  <div class="skills-grid">
+    {%- for group in page.skill_groups -%}
+    <section class="skills-group">
+      <h2 class="skills-group-title">{{ group.name }}</h2>
+      {%- if group.description -%}
+      <p class="skills-group-desc">{{ group.description }}</p>
+      {%- endif -%}
+
+      {%- assign current_skills = group.skills | where_exp: "s", "s.learning != true" -%}
+      {%- assign learning_skills = group.skills | where_exp: "s", "s.learning == true" -%}
+
+      {%- if current_skills.size > 0 -%}
+      <div class="skills-chips">
+        {%- for skill in current_skills -%}
+        <span class="skill-chip">{{ skill.name }}</span>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+
+      {%- if learning_skills.size > 0 -%}
+      <div class="skills-developing">
+        <span class="skills-developing-label">{{ page.developing_label | default: "Currently building" }}</span>
+        <div class="skills-chips">
+          {%- for skill in learning_skills -%}
+          <span class="skill-chip skill-chip--learning">{{ skill.name }}</span>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- endif -%}
+
+    </section>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  {%- if content != "" -%}
+  <section class="skills-extra">
+    {{ content }}
+  </section>
+  {%- endif -%}
+
+</article>
