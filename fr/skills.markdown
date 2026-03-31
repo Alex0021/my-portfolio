@@ -39,6 +39,16 @@ skill_groups:
       - name: "Robotique en essaim"
       - name: "Filtrage de Kalman"
       - name: "MPC / Optimisation non-linéaire"
+      - name: "LQR / Contrôleur prédictif"
+
+  - name: "Réseaux électriques de puissances"
+    skills:
+      - name: "Analyse facteur de puissance"
+      - name: "Micro-réseaux"
+      - name: "Centrales solaires / hydroélectriques / éoliennes"
+      - name: "Modèle distribué de lignes"
+      - name: "Calculs en p.u."
+      - name: "Écoulement de puissance"
 
   - name: "Protocoles de communication"
     skills:

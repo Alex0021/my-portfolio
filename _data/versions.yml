@@ -1,6 +1,14 @@
 # Complete version history with changelogs
 # Format: tag, name, date, and major_changes (array of brief descriptions)
 
+- tag: "v1.2.2"
+  name: "Minor content updates"
+  date: "2026-03-31"
+  description: "Some improvements to the descriptions"
+  major_changes:
+    - "Improved the description of the french paragraph about me"
+    - "Added some missing skills"
+
 - tag: "v1.2.0"
   name: "French completed"
   date: "2026-03-29"

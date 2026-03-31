@@ -39,6 +39,16 @@ skill_groups:
       - name: "Swarm Robotics"
       - name: "Kalman Filtering"
       - name: "MPC / Nonlinear Optimization"
+      - name: "LQR / FeedForward Control"
+
+  - name: "Power Systems"
+    skills:
+      - name: "Power generation - Wind / Hydraulic / Solar"
+      - name: "Microgrid"
+      - name: "Power factor correction"
+      - name: "Distributed line modeling"
+      - name: "pu calculations"
+      - name: "Power flow"
 
   - name: "Communication Protocols"
     skills:
